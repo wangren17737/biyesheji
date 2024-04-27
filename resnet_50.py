@@ -128,7 +128,7 @@ optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
 exp_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=5, gamma=0.1)
 
 # 训练模型
-model = train_model(model, criterion, optimizer, exp_lr_scheduler, num_epochs=10)
+model = train_model(model, criterion, optimizer, exp_lr_scheduler, num_epochs=50)
 
 # 保存模型
 torch.save(model.state_dict(), 'resnet50_emotion.pth')
